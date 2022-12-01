@@ -83,6 +83,14 @@ body nav
 article
 {
     background-color: rgb(148, 148, 148);
+    flex-direction: column;
+}
+
+.linkz
+{
+    /*flex-direction: row;*/
+    height: 10%;
+    justify-content: center;
 }
 
 .footer
