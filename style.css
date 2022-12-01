@@ -1,11 +1,43 @@
 body
 {
     background-color: brown;
+    /*height: 100vh;*/
 }
 
 body div
 {
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
     align-items: stretch;
+    align-content: center;
 }
+
+header
+{
+    text-align: center;
+
+}
+
+body nav
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vh;
+}
+
+.menu
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.item
+{
+    width: 5vh;
+}
+
+
+
