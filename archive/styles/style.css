@@ -1,0 +1,79 @@
+body {
+  opacity: 0;
+  -webkit-transition: opacity 3s;
+  transition: opacity 3s;
+}
+
+header {
+  background-image: url("../images/ocean.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-clip: border-box;
+  background-size: cover;
+  background-position-x: center;
+  max-width: 100%;
+  text-align: center;
+}
+
+/*
+.titres 
+{
+    margin: 0;
+    color: white;
+    font-size: 42px;
+    text-align: center;
+    font-family: sans-serif;
+}
+*/
+#recherchePersonne {
+  /*background-position: 10px 12px; /* Position the search icon */
+  /*background-repeat: no-repeat; /* Do not repeat the icon image */
+  /*width: 100%; /* Full-width */
+  /*font-size: 16px; /* Increase font-size */
+  /*padding: 12px 20px 12px 40px; /* Add some padding */
+  /*border: 1px solid #ddd; /* Add a grey border */
+  margin-top: 5%;
+  margin-bottom: 5%;
+  /* Add some space below the input */
+  background-color: rgba(245, 245, 245, 0.9);
+}
+
+#recherchePersonne:hover {
+  background-color: rgba(235, 235, 235, 0.9);
+}
+
+#listePersonnes li a {
+  border: 1px solid #ddd;
+  /* Add a border to all links */
+  margin-top: -1px;
+  /* Prevent double borders */
+  background-color: #f6f6f6;
+  /* Grey background color */
+  padding: 12px;
+  /* Add some padding */
+  text-decoration: none;
+  /* Remove default text underline */
+  font-size: 18px;
+  /* Increase the font-size */
+  color: black;
+  /* Add a black text color */
+  display: block;
+  /* Make it into a block element to fill the whole list */
+}
+
+#listePersonnes li a:hover:not(.header) {
+  background-color: #9c8f8f;
+  /* Add a hover effect to all links, except for headers */
+}
+
+#sidemenu {
+  position: -webkit-sticky;
+  position: sticky;
+  display: inline-block;
+  vertical-align: top;
+  max-height: 100vh;
+  overflow-y: auto;
+  top: 0;
+  padding: 2%;
+}
+/*# sourceMappingURL=style.css.map */
