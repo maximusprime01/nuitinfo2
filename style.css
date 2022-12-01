@@ -67,5 +67,7 @@ body nav
 {
     display: flex;
     flex-direction: row;
+    text-align: center;
+    color: c;
 }
 
