@@ -1,39 +1,37 @@
-:root
-{
+:root {
     --primary-color: #edf2fc;
     --secondary-color: #212121;
 }
-.darkmode
-{
+
+.darkmode {
     --primary-color: #000106;
     --secondary-color: #fff;
 }
 
-
-body
-{
+body {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     /*height: 100vh;*/
 }
 
+
 /* Hide scrollbar for IE, Edge and Firefox */
-body
-{
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
+
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar 
-{
+
+body::-webkit-scrollbar {
     display: none;
 }
-  
 
-
-body div
-{
+body div {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -42,15 +40,12 @@ body div
     box-sizing: border-box;
 }
 
-header
-{
+header {
     text-align: center;
     background-color: rgb(148, 148, 148);
-
 }
 
-body nav
-{
+body nav {
     background-color: rgb(148, 148, 148);
     display: flex;
     flex-direction: row;
@@ -59,34 +54,29 @@ body nav
     height: 10vh;
 }
 
-.menu
-{
+.menu {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     box-sizing: border-box;
 }
 
-.item
-{
+.item {
     width: 5vh;
 }
 
-.main
-{
+.main {
     height: 100vh;
     width: 100vw;
     font-size: 20em;
     text-align: center;
 }
 
-article
-{
+article {
     background-color: rgb(148, 148, 148);
 }
 
-.footer
-{
+.footer {
     background-color: rgb(148, 148, 148);
     display: flex;
     flex-direction: row;
@@ -94,3 +84,30 @@ article
     color: c;
 }
 
+
+/*Main Game*/
+
+.start-button {
+    font-size: 20px;
+    font-weight: 600;
+    height: 7vh;
+    width: 7vw;
+    color: white;
+    background-color: rgb(24, 24, 24);
+    border-radius: 45px / 15px;
+    transition: all 0.5s;
+}
+
+.start-button:hover {
+    height: 8vh;
+    width: 8vw;
+    border-radius: 20px 40px;
+    color: rgb(24, 24, 24);
+    background-color: rgb(255, 255, 255);
+}
+
+.score {
+    display: none;
+    font-size: 30px;
+    text-align: center;
+}
