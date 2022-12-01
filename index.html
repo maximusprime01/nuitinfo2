@@ -25,7 +25,7 @@
                         <p>Learn More</p>
                     </div>
                     <div class="item">
-                        <p>Contact Us</p>
+                        <img src = "media/moon.png" id = "dkmicon">
                     </div>
                 </div>
             </nav>
@@ -46,7 +46,6 @@
                 <p>https://www.facebook.com/SidaInfoService</p>
             </article>
 
-
             <div class="footer">
                 <p>
                     Powered by A. team
@@ -57,6 +56,20 @@
             </div>
 
         </div>
-        
+    
+        <script>
+            var icon = document.getElementById("dkmicon");
+
+            icon.onclick = function(){
+                document.body.classList.toggle("darkmode");
+                if(document.body.classList.contains("darkmode")){
+                    icon.src = "media/sun.png";
+                }else{
+                    icon.src = "media/moon.png";
+                }
+            }
+
+        </script>
+
     </body>
 </html>

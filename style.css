@@ -1,7 +1,20 @@
+:root
+{
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+}
+.darkmode
+{
+    --primary-color: #000106;
+    --secondary-color: #fff;
+}
+
+
 body
 {
-    background-color: rgb(175, 175, 175);
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    /*height: 100vh;*/
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
