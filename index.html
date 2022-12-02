@@ -39,80 +39,100 @@
         <div class="main">
             <button class="start-button" id="startButton">Start</button>
             <div class="score" id="score">score = 0</div>
-            <!--    <div class="MainGame">
-                        <div class="SwipeCard">
-                            <div class="content">
-                                <div class="header">
-                                    <h1>Qu'est-ce donc que cette chose ?</h1>
-                                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FlQezinb283E%2Fmaxresdefault.jpg&f=1&nofb=1&ipt=c2a4c415b649f1c470d70105ddaa18d3f7f5093185dbfd85e295054f67751112&ipo=images">
-                                </div>
-                                <div class="body">
-                                    <div class="suggestions">
-                                        <h1>Réponses :</h1>
-                                        <p>a) Une cuillère</p>
-                                        <p>b) Un Giga Chad</p>
-                                        <p>c) D'accord</p>
-                                    </div>
-                                    <div class="reponses">
-                                        <button class="btn a">A</button>
-                                        <button class="btn b">B</button>
-                                        <button class="btn c">C</button>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="MainGame" id="mainGame">
+                <div class="SwipeCard">
+                    <div class="header">
+                        <h1>Qu'est-ce donc que cette chose ?</h1>
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FlQezinb283E%2Fmaxresdefault.jpg&f=1&nofb=1&ipt=c2a4c415b649f1c470d70105ddaa18d3f7f5093185dbfd85e295054f67751112&ipo=images">
+                    </div>
+                    <div class="body">
+                        <div class="suggestions">
+                            <h1>Réponses :</h1>
+                            <p>a) Une cuillère</p>
+                            <p>b) Un Giga Chad</p>
+                            <p>c) D'accord</p>
+                        </div>
+                        <div class="reponses">
+                            <button class="btn a">A</button>
+                            <button class="btn b">B</button>
+                            <button class="btn c">C</button>
                         </div>
                     </div>
-            -->
-        </div>
-
-            <article>
-                <h1>Learn more</h1>
-                <div class = "linkz">
-                    <p>Sida Info Service</p> <a href = "https://www.sida-info-service.org"> <img src = "media/globe.svg"> </a>
-                    <a href = "https://www.instagram.com/sida_info_service/?hl=fr"> <img src = "media/instagram.svg"> </a>
-                    <a href = "https://www.facebook.com/SidaInfoService"> <img src = "media/facebook.svg"> </a>
-                </div><div class = "linkz">
-                    <p>Sexualités Info Santé</p> <a href = "https://www.sexualites-info-sante.fr"> <img src = "media/globe.svg"> </a>
-                    <a href = "https://www.instagram.com/sexualites_info_sante/?hl=fr"> <img src = "media/instagram.svg"> </a>
-                </div><div class = "linkz">
-                    <p>Hépatites Info Service</p> <a href = "https://www.hepatites-info-service.org"> <img src = "media/globe.svg"> </a>
-                </div><div class = "linkz">
-                    <p>VIH Info Soignants</p><a href = "https://www.vih-info-soignants.fr"></a>
-                </div><div class = "linkz">
-                    <p>Ligneazur</p><a href = "https://www.ligneazur.org"> <img src = "media/globe.svg"> </a>
                 </div>
-            </article>
-
-        <div class="footer">
-            <p>
-                Powered by A. team
-            </p>
-            <p>
-                AAAAAAAAAAAAAAAAAAAAA!
-            </p>
+            </div>
         </div>
+    </div>
+    <div id="countdown">10</div>
+
+    <article>
+        <h1>Learn more</h1>
+        <div class="linkz">
+            <p>Sida Info Service</p>
+            <a href="https://www.sida-info-service.org"> <img src="media/globe.svg"> </a>
+            <a href="https://www.instagram.com/sida_info_service/?hl=fr"> <img src="media/instagram.svg"> </a>
+            <a href="https://www.facebook.com/SidaInfoService"> <img src="media/facebook.svg"> </a>
+        </div>
+        <div class="linkz">
+            <p>Sexualités Info Santé</p>
+            <a href="https://www.sexualites-info-sante.fr"> <img src="media/globe.svg"> </a>
+            <a href="https://www.instagram.com/sexualites_info_sante/?hl=fr"> <img src="media/instagram.svg"> </a>
+        </div>
+        <div class="linkz">
+            <p>Hépatites Info Service</p>
+            <a href="https://www.hepatites-info-service.org"> <img src="media/globe.svg"> </a>
+        </div>
+        <div class="linkz">
+            <p>VIH Info Soignants</p>
+            <a href="https://www.vih-info-soignants.fr"></a>
+        </div>
+        <div class="linkz">
+            <p>Ligneazur</p>
+            <a href="https://www.ligneazur.org"> <img src="media/globe.svg"> </a>
+        </div>
+    </article>
+
+    <div class="footer">
+        <p>
+            Powered by A. team
+        </p>
+        <p>
+            AAAAAAAAAAAAAAAAAAAAA!
+        </p>
+    </div>
 
     </div>
 
     <script>
         var icon = document.getElementById("dkmicon");
 
-        icon.onclick = function(){
+        icon.onclick = function() {
             document.body.classList.toggle("darkmode");
-            if(document.body.classList.contains("darkmode")){
+            if (document.body.classList.contains("darkmode")) {
                 icon.src = "media/sun2.svg";
-            }else{
+            } else {
                 icon.src = "media/moon.svg";
             }
         }
-        
     </script>
 
     <script>
         document.getElementById("startButton").addEventListener("click", function() {
-            document.getElementById("score").style.display = "block";
             document.getElementById("startButton").style.display = "none";
+            document.getElementById("mainGame").style.display = "flex";
         });
+
+
+        var timeleft = 10;
+        var Timer = setInterval(function() {
+            if (timeleft <= 0) {
+                clearInterval(Timer);
+                document.getElementById("mainGame").style.display = "none";
+                document.getElementById("score").style.display = "block";
+            } else {
+                document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
+            }
+            timeleft--;
+        }, 1000);
     </script>
 
 </body>
