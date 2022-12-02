@@ -46,7 +46,9 @@
 
 
             <div class="main-centered score" id="score">
-                score = 0
+                <div id="score-nb">
+                    score = 0
+                </div>
                 <button class="restart-button" id="restartButton">
                     Play Again
                 </button>
@@ -196,6 +198,18 @@
             document.getElementById("score").style.display = "none";
             document.getElementById("startButton").style.display = "flex";
         });
+    </script>
+
+    <script>
+        var score = 0;
+
+        document.getElementById("b").addEventListener("click", function () {
+            score++;
+            document.getElementById("score-nb").innerHTML = "score = " + score;
+        });
+
+        
+
     </script>
 
 </body>
