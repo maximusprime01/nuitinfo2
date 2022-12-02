@@ -42,9 +42,28 @@
             <div class="MainGame" id="mainGame">
                 <div class="SwipeCard">
                     <div class="header">
-                        <h1>Qu'est-ce donc que cette chose ?</h1>
-                        <img src="media/gigachad.jpg">
+                        <h2 id="title1">Qu'est-ce donc que cette chose ?</h2>
+                        <img src="media/gigachad.jpg">                        
                     </div>
+                    
+                    <div class="card-body">
+                        <div class="answer">
+                            <p>Une cuillère</p>
+                            <button class="btn a">A</button>                        
+                        </div>
+                        <div class="answer">
+                            <p>Un Giga Chad</p>
+                            <div>
+
+                            </div>
+                            <button class="btn b">B</button>
+                        </div>
+                        <div class="answer">
+                            <p>D'accord</p>
+                            <button class="btn c">C</button>                            
+                        </div>
+                    </div>
+                    <!--
                     <div class="body">
                         <div class="suggestions">
                             <h1>Réponses :</h1>
@@ -58,6 +77,8 @@
                             <button class="btn c">C</button>
                         </div>
                     </div>
+                    -->
+
                 </div>
             </div>
         </div>
@@ -165,7 +186,7 @@
                 } else {
                     document.getElementById("countdown").innerHTML = timeleft + " seconds remaining"; // cherche l'endroit avec l'ID "countdown" et le modifie (.innerHTML) par les trucs après le égal
                 }
-                timeleft--; //écriture de la décrémentation, en gros timeleft = timeleft - 1
+                //timeleft--; //écriture de la décrémentation, en gros timeleft = timeleft - 1
             }, 1000); // On a un interval qui est en ms donc si on veut que ça actualise toutes les secs faut mettre 1000ms
         });
     </script>
