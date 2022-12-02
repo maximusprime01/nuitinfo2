@@ -167,9 +167,10 @@
                 icon.src = "media/moon.svg";
             }
         }
-    </script>
 
-    <script>
+        
+        var score = 0;
+
         document.getElementById("startButton").addEventListener("click", function start() {
             
             var timeleft = 10; //temps de départ, par exemple si vous voulez 2min mettez 120
@@ -195,13 +196,12 @@
         });
         
         document.getElementById("restartButton").addEventListener("click", function restart() {
+            score = 0;
             document.getElementById("score").style.display = "none";
             document.getElementById("startButton").style.display = "flex";
         });
-    </script>
 
-    <script>
-        var score = 0;
+        
 
         document.getElementById("b").addEventListener("click", function () {
             score++;
