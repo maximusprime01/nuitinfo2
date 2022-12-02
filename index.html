@@ -22,12 +22,12 @@
                 </a>
             </div>
             <div id="nav-game-section" class="nav-section">
-                <a href="#">
+                <a href="#game">
                     Game
                 </a>
             </div>
             <div id="nav-learnmore-section" class="nav-section">
-                <a href="#">
+                <a href="#learnmore">
                     Learn More
                 </a>
             </div>
@@ -36,11 +36,23 @@
             </div>
         </nav>
 
-        <div class="main">
-            <button class="start-button" id="startButton">Start</button>
-            <div class="score" id="score">score = 0</div>
+        <div class="main" id="game">
+
+            <div id="startButton">
+                <button class="start-button">
+                    Start
+                </button>
+            </div>    
+
+
+            <div class="main-centered score" id="score">
+                score = 0
+            </div>
+
+
             <div class="MainGame" id="mainGame">
                 <div class="SwipeCard">
+
                     <div class="header">
                         <h2 id="title1">Qu'est-ce donc que cette chose ?</h2>
                         <img src="media/gigachad.jpg">                        
@@ -60,6 +72,7 @@
                             <button class="btn c">C</button>                            
                         </div>
                     </div>
+
                     <div id="countdown">
                         - - - 10 - - -
                     </div>
@@ -69,11 +82,10 @@
         </div>
     </div>
     
-    <article>
+    <article id="learnmore">
         <h1>Learn more</h1>
         <div class = "linkz">
             <p>Sida Info Service</p>
-
             <div>
                 <a href = "https://www.facebook.com/SidaInfoService">
                     <img src = "media/facebook.svg" class = "bigsvg">
@@ -86,10 +98,9 @@
                 <a href = "https://www.sida-info-service.org">
                     <img src = "media/globe.svg" class = "bigsvg">
                 </a>
-
             </div>
-
         </div>
+
         <div class = "linkz">
             <p>Sexualités Info Santé</p>
             <div> 
@@ -102,8 +113,8 @@
                 </a>
 
             </div>
-
         </div>
+
         <div class = "linkz">                
             <p>Hépatites Info Service</p>
             <div>
@@ -111,8 +122,8 @@
                     <img src = "media/globe.svg" class = "bigsvg">
                 </a>
             </div>
-
         </div>
+
         <div class = "linkz">
             <p>VIH Info Soignants</p>
             <div>
@@ -120,8 +131,8 @@
                     <img src = "media/globe.svg" class = "bigsvg">
                 </a>
             </div> 
-
         </div>
+
         <div class = "linkz">
             <p>Ligneazur</p>                
             <div>
@@ -129,8 +140,8 @@
                     <img src = "media/globe.svg" class = "bigsvg">
                 </a>
             </div>
-
         </div>
+
     </article>
 
     <div class="footer">
@@ -139,8 +150,6 @@
             <br/>
             <br/>AAAAAAAAAAAAAAAAAAAAA!
         </p>
-    </div>
-
     </div>
 
     <script>
@@ -165,7 +174,26 @@
                 if (timeleft <= 0) {
                     clearInterval(Timer); //ça stop le countdown pour pas que ça aille <0 
                     document.getElementById("mainGame").style.display = "none"; //Modifie le display de l'élément ayant l'ID "mainGame"
-                    document.getElementById("score").style.display = "block"; //Modifie le display de l'élément ayant l'ID "score"
+                    document.getElementById("score").style.display = "flex"; //Modifie le display de l'élément ayant l'ID "score"
+                    document.getElementById("countdown").innerHTML = "Time's up !";
+                } else {
+                    document.getElementById("countdown").innerHTML = "- - - " + timeleft + " - - -"; // cherche l'endroit avec l'ID "countdown" et le modifie (.innerHTML) par les trucs après le égal
+                }
+                timeleft--; //écriture de la décrémentation, en gros timeleft = timeleft - 1
+            }, 1000); // On a un interval qui est en ms donc si on veut que ça actualise toutes les secs faut mettre 1000ms
+        });
+    </script>
+
+    <script>
+        document.getElementById("replayButton").addEventListener("click", function() {
+            document.getElementById("startButton").style.display = "none"; //Modifie le display de l'élément ayant l'ID "StartButton"
+            document.getElementById("mainGame").style.display = "flex"; //Modifie le display de l'élément ayant l'ID "mainGame"
+            var timeleft = 10; //temps de départ, par exemple si vous voulez 2min mettez 120
+            var Timer = setInterval(function() {
+                if (timeleft <= 0) {
+                    clearInterval(Timer); //ça stop le countdown pour pas que ça aille <0 
+                    document.getElementById("mainGame").style.display = "none"; //Modifie le display de l'élément ayant l'ID "mainGame"
+                    document.getElementById("score").style.display = "flex"; //Modifie le display de l'élément ayant l'ID "score"
                     document.getElementById("countdown").innerHTML = "Time's up !";
                 } else {
                     document.getElementById("countdown").innerHTML = "- - - " + timeleft + " - - -"; // cherche l'endroit avec l'ID "countdown" et le modifie (.innerHTML) par les trucs après le égal

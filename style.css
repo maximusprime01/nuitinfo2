@@ -7,8 +7,9 @@
 }
 
 .darkmode {
-    --primary-color: #000106;
-    --secondary-color: #fff;
+    --primary-color: #1f1f22;
+    --secondary-color: #c2c2c2;
+    --third-color: #303866;
 }
 
 * {
@@ -18,6 +19,7 @@
 a
 {
     text-decoration: none;
+    color: inherit;
 }
 
 body {
@@ -60,7 +62,10 @@ nav {
     width: 100%;
 
     background-color: var(--third-color); 
+
+    
 }
+
 
 nav > .nav-section {
     text-align: center;
@@ -73,7 +78,7 @@ nav > .nav-section {
     justify-content: center;
 
     padding: 2rem;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
 
     font-size: 1.5em;
 }
@@ -90,7 +95,7 @@ nav > .nav-section {
     justify-content: flex-start;
     align-self: center;
 
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: none;
 }
 
 #nav-darkmode-section > img
@@ -120,8 +125,10 @@ nav > .nav-section {
 .main {
     height: 100vh;
     width: 100vw;
+    /*
     font-size: 20em;
     text-align: center;
+    */
 }
 
 article 
@@ -129,6 +136,7 @@ article
     background-color: var(--third-color); 
     display: flex;
     flex-direction: column;
+    padding: 5vmin 0;
 }
 
 article > h1
@@ -143,6 +151,11 @@ article > h1
     flex-direction: row;
     justify-content: space-between;
     margin: 0 25vw 0 25vw;
+}
+
+.linkz > p
+{
+    font-size: 1.5em;
 }
 
 .linkz > div
@@ -175,42 +188,81 @@ article > h1
     justify-content: center;
     color: var(--secondary-color);
     text-align: center;
+    padding: 5vmin;
 }
 
 
 /*Main Game Start Button and Score*/
 
+
+#startButton
+{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+#score
+{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+*/
+
+
 .start-button {
-    font-size: 20px;
+    font-size: 3em;
     font-weight: 600;
-    height: 7vh;
-    width: 7vw;
+    height: 30vmin;
+    width: 60vmin;
     color: var(--primary-color);
     background-color: var(--secondary-color);
-    border-radius: 45px / 15px;
+    border-radius: 5vmin  3vmin;
+    border-color: var(--secondary-color);
     transition: all 0.5s;
 }
 
 .start-button:hover {
-    height: 8vh;
-    width: 8vw;
-    border-radius: 20px 40px;
+    height: 32vmin;
+    width: 64vmin;
+    border-radius: 3vmin 5vmin;
     color: var(--secondary-color);
     background-color: var(--primary-color);
 }
 
+
+.main-centered
+{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .score {
     display: none;
-    font-size: 30px;
-    text-align: center;
+    font-size: 3em;
+    /*text-align: center;*/
 }
+
+
 
 .MainGame {
     display: none;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     justify-content: center;
+    align-items: center;
     width: 100%;
-    margin: 20px 0 80px;
+    height: 100%;
+    /*margin: 20px 0 80px;*/
 }
 
 .SwipeCard {
@@ -259,7 +311,7 @@ article > h1
     position: absolute;
     text-align: center;
     padding: 1.5em 0;
-    text-shadow: 1px 2px 2px var(--secondary-color);
+    text-shadow: 1px 2px 2px #000;
 }
 
 #title1
