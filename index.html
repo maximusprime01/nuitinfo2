@@ -12,13 +12,13 @@
 
         <nav>
             <div id="nav-logo-section" class="nav-section">
-                <a href="#">
-                    Logo
+                <a href="https://www.linkedin.com/company/sis-association">
+                    SIS Association
                 </a>
             </div>
             <div id="nav-title-section" class="nav-section">
-                <a href="#">
-                    Maxime's strap on stash
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                    Chad does not have AIDS
                 </a>
             </div>
             <div id="nav-game-section" class="nav-section">
@@ -47,6 +47,9 @@
 
             <div class="main-centered score" id="score">
                 score = 0
+                <button class="restart-button" id="restartButton">
+                    Play Again
+                </button>
             </div>
 
 
@@ -60,15 +63,15 @@
                     
                     <div class="card-body">
                         <div class="answer">
-                            <p>Une cuillère</p>
+                            <p>Jeffrey</p>
                             <button class="btn a">A</button>                        
                         </div>
                         <div class="answer">
-                            <p>Un Giga Chad</p>
+                            <p>Adonis</p>
                             <button class="btn b">B</button>
                         </div>
                         <div class="answer">
-                            <p>D'accord</p>
+                            <p>Your mom</p>
                             <button class="btn c">C</button>                            
                         </div>
                     </div>
@@ -167,10 +170,15 @@
     </script>
 
     <script>
-        document.getElementById("startButton").addEventListener("click", function() {
+        document.getElementById("startButton").addEventListener("click", function start() {
+            
+            var timeleft = 10; //temps de départ, par exemple si vous voulez 2min mettez 120
+            document.getElementById("countdown").innerHTML = "- - - " + timeleft + " - - -";
+
             document.getElementById("startButton").style.display = "none"; //Modifie le display de l'élément ayant l'ID "StartButton"
             document.getElementById("mainGame").style.display = "flex"; //Modifie le display de l'élément ayant l'ID "mainGame"
-            var timeleft = 10; //temps de départ, par exemple si vous voulez 2min mettez 120
+
+
             var Timer = setInterval(function() {
                 if (timeleft <= 0) {
                     clearInterval(Timer); //ça stop le countdown pour pas que ça aille <0 
@@ -181,8 +189,18 @@
                     document.getElementById("countdown").innerHTML = "- - - " + timeleft + " - - -"; // cherche l'endroit avec l'ID "countdown" et le modifie (.innerHTML) par les trucs après le égal
                 }
                 timeleft--; //écriture de la décrémentation, en gros timeleft = timeleft - 1
-            }, 1000); // On a un interval qui est en ms donc si on veut que ça actualise toutes les secs faut mettre 1000ms
+            } , 1000); // On a un interval qui est en ms donc si on veut que ça actualise toutes les secs faut mettre 1000ms
+            
+            
         });
+        
+        document.getElementById("restartButton").addEventListener("click", function restart() {
+            document.getElementById("score").style.display = "none";
+            document.getElementById("startButton").style.display = "flex";
+        });
+        
+
+        
     </script>
 
 </body>

@@ -241,7 +241,7 @@ article > h1
 {
     height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -251,6 +251,28 @@ article > h1
     display: none;
     font-size: 3em;
     /*text-align: center;*/
+    margin: 4vmin;
+}
+
+.restart-button {
+    font-size: 1em;
+    font-weight: 600;
+    height: 20vmin;
+    width: 40vmin;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 5vmin  3vmin;
+    border-color: var(--secondary-color);
+    transition: all 0.5s;
+    margin: 4vmin;
+}
+
+.restart-button:hover {
+    height: 22vmin;
+    width: 44vmin;
+    border-radius: 3vmin 5vmin;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 
