@@ -1,6 +1,7 @@
 :root {
     --primary-color: #edf2fc;
     --secondary-color: #212121;
+    --third-color: #e3a507;
 }
 
 .darkmode {
@@ -17,6 +18,7 @@ body {
     color: var(--secondary-color);
     margin: 0px;
     height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
@@ -46,42 +48,53 @@ body div {
 
 nav {
     display: flex;
-    width: 100%;
+
+    width: 100vw;
     height: 10vh;
-    background-color: rgb(148, 148, 148);
+
+    background-color: var(--third-color); 
+    
     box-sizing: border-box;
 }
 
 nav>.nav-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    align-self: center;
+
     padding: 3rem 2rem;
     gap: 1rem;
     border-right: 1px solid #fff;
-    box-sizing: border-box;
+
     font-size: 1.5rem;
 }
 
-#nav-title-section {
-    flex-basis: calc(100% / 3);
+#nav-title-section
+{
+    text-align: center;
+    flex-basis: calc(100vw / 3);
+}
+
+#nav-logo-section
+{
+    flex-basis: calc(100vw / 3);
+    text-align: left;
+    align-self: center;
+
+    border-left: 1px solid #fff;
+}
+
+#nav-darkmode-section > img
+{
+    width: 5vw;
+    height: 5vh;
 }
 
 #nav-game-section,
 #nav-learnmore-section,
-#nav-darkmode-section {
+#nav-darkmode-section
+{
     flex-grow: 1;
-}
-
-#nav-logo-section {
-    flex-basis: calc(100% / 3);
-    align-items: flex-start;
-    justify-content: center;
-    border-left: 1px solid #fff;
-}
-
-#nav-darkmode-section>img {
-    font-size: 3rem;
+    text-align: center;
 }
 
 .menu {
@@ -101,23 +114,56 @@ nav>.nav-section {
     text-align: center;
 }
 
-article {
-    background-color: rgb(148, 148, 148);
+article 
+{
+    background-color: var(--third-color); 
+    display: flex;
     flex-direction: column;
 }
 
-.linkz {
-    /*flex-direction: row;*/
-    height: 10%;
-    justify-content: center;
+article > h1
+{
+    font-size: 2em;
+    text-align: center;
+}
+
+.linkz
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 25vw 0 25vw;
+}
+
+.linkz > div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    gap: 1vmin;
+    padding: 1vmin;
+}
+
+.linkz > a
+{
+    display: flex;
+    align-items: center;
+}
+
+
+.bigsvg
+{
+    height: 4vh;
+    width: 4vw;
 }
 
 .footer {
-    background-color: rgb(148, 148, 148);
+    background-color: var(--third-color); 
     display: flex;
     flex-direction: row;
-    text-align: center;
-    color: c;
+    justify-content: center;
+    color: chartreuse;
 }
 
 
