@@ -361,12 +361,10 @@ article > h1
     align-items: center;
     justify-content: space-between;
     width: 75%;
-    font-size: 20px;
-    font-weight: normal;
 }
 
 .SwipeCard > .card-body > .answer > p {
-    font-size: 20px;
+    font-size: 1.5em;
     font-weight: normal;
 }
 
