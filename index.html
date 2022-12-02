@@ -81,8 +81,7 @@
                     </div>
                 </div>
             </div>
-
-
+            <button class="start-button" id="replayButton">Play again ?</button>
         </div>
     </div>
     
@@ -201,6 +200,44 @@
         
 
         
+    </script>
+
+    <script>
+        document.getElementById("replayButton").addEventListener("click", function() {
+            document.getElementById("startButton").style.display = "none"; //Modifie le display de l'élément ayant l'ID "StartButton"
+            document.getElementById("mainGame").style.display = "flex"; //Modifie le display de l'élément ayant l'ID "mainGame"
+            var timeleft = 10; //temps de départ, par exemple si vous voulez 2min mettez 120
+            var Timer = setInterval(function() {
+                if (timeleft <= 0) {
+                    clearInterval(Timer); //ça stop le countdown pour pas que ça aille <0 
+                    document.getElementById("mainGame").style.display = "none"; //Modifie le display de l'élément ayant l'ID "mainGame"
+                    document.getElementById("score").style.display = "flex"; //Modifie le display de l'élément ayant l'ID "score"
+                    document.getElementById("countdown").innerHTML = "Time's up !";
+                } else {
+                    document.getElementById("countdown").innerHTML = "- - - " + timeleft + " - - -"; // cherche l'endroit avec l'ID "countdown" et le modifie (.innerHTML) par les trucs après le égal
+                }
+                timeleft--; //écriture de la décrémentation, en gros timeleft = timeleft - 1
+            }, 1000); // On a un interval qui est en ms donc si on veut que ça actualise toutes les secs faut mettre 1000ms
+        });
+    </script>
+
+    <script>
+        document.getElementById("replayButton").addEventListener("click", function() {
+            document.getElementById("startButton").style.display = "none"; //Modifie le display de l'élément ayant l'ID "StartButton"
+            document.getElementById("mainGame").style.display = "flex"; //Modifie le display de l'élément ayant l'ID "mainGame"
+            var timeleft = 10; //temps de départ, par exemple si vous voulez 2min mettez 120
+            var Timer = setInterval(function() {
+                if (timeleft <= 0) {
+                    clearInterval(Timer); //ça stop le countdown pour pas que ça aille <0 
+                    document.getElementById("mainGame").style.display = "none"; //Modifie le display de l'élément ayant l'ID "mainGame"
+                    document.getElementById("score").style.display = "block"; //Modifie le display de l'élément ayant l'ID "score"
+                    document.getElementById("countdown").innerHTML = "Time's up !";
+                } else {
+                    document.getElementById("countdown").innerHTML = "- - - " + timeleft + " - - -"; // cherche l'endroit avec l'ID "countdown" et le modifie (.innerHTML) par les trucs après le égal
+                }
+                timeleft--; //écriture de la décrémentation, en gros timeleft = timeleft - 1
+            }, 1000); // On a un interval qui est en ms donc si on veut que ça actualise toutes les secs faut mettre 1000ms
+        });
     </script>
 
 </body>
