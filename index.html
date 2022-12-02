@@ -57,9 +57,6 @@
                         </div>
                         <div class="answer">
                             <p>Un Giga Chad</p>
-                            <div>
-
-                            </div>
                             <button class="btn b">B</button>
                         </div>
                         <div class="answer">
@@ -67,91 +64,81 @@
                             <button class="btn c">C</button>                            
                         </div>
                     </div>
-                    <!--
-                    <div class="body">
-                        <div class="suggestions">
-                            <h1>Réponses :</h1>
-                            <p>a) Une cuillère</p>
-                            <p>b) Un Giga Chad</p>
-                            <p>c) D'accord</p>
-                        </div>
-                        <div class="reponses">
-                            <button class="btn a">A</button>
-                            <button class="btn b">B</button>
-                            <button class="btn c">C</button>
-                        </div>
+                    <div id="countdown">
+                        - - - 10 - - -
                     </div>
-                    -->
-
                 </div>
             </div>
         </div>
     </div>
-    <div id="countdown">10 seconds remaining</div>
+    
+    <article>
+        <h1>Learn more</h1>
+        <div class = "linkz">
+            <p>Sida Info Service</p>
 
         <article id="learnmore">
             <h1>Learn more</h1>
             <div class = "linkz">
                 <p>Sida Info Service</p>
+            <div>
+                <a href = "https://www.facebook.com/SidaInfoService">
+                    <img src = "media/facebook.svg" class = "bigsvg">
+                </a>
 
-                <div>
-                    <a href = "https://www.facebook.com/SidaInfoService">
-                        <img src = "media/facebook.svg" class = "bigsvg">
-                    </a>
+                <a href = "https://www.instagram.com/sida_info_service/?hl=fr">
+                    <img src = "media/instagram.svg" class = "bigsvg">
+                </a>
 
-                    <a href = "https://www.instagram.com/sida_info_service/?hl=fr">
-                        <img src = "media/instagram.svg" class = "bigsvg">
-                    </a>
-
-                    <a href = "https://www.sida-info-service.org">
-                        <img src = "media/globe.svg" class = "bigsvg">
-                    </a>
-
-                </div>
+                <a href = "https://www.sida-info-service.org">
+                    <img src = "media/globe.svg" class = "bigsvg">
+                </a>
 
             </div>
-            <div class = "linkz">
-                <p>Sexualités Info Santé</p>
-                <div> 
-                    <a href = "https://www.instagram.com/sexualites_info_sante/?hl=fr">
-                        <img src = "media/instagram.svg" class = "bigsvg">
-                    </a>
-                    
-                    <a href = "https://www.sexualites-info-sante.fr">
-                        <img src = "media/globe.svg" class = "bigsvg">
-                    </a>
 
-                </div>
-
-            </div>
-            <div class = "linkz">                
-                <p>Hépatites Info Service</p>
-                <div>
-                    <a href = "https://www.hepatites-info-service.org">
-                        <img src = "media/globe.svg" class = "bigsvg">
-                    </a>
-                </div>
+        </div>
+        <div class = "linkz">
+            <p>Sexualités Info Santé</p>
+            <div> 
+                <a href = "https://www.instagram.com/sexualites_info_sante/?hl=fr">
+                    <img src = "media/instagram.svg" class = "bigsvg">
+                </a>
+                
+                <a href = "https://www.sexualites-info-sante.fr">
+                    <img src = "media/globe.svg" class = "bigsvg">
+                </a>
 
             </div>
-            <div class = "linkz">
-                <p>VIH Info Soignants</p>
-                <div>
-                    <a href = "https://www.vih-info-soignants.fr">
-                        <img src = "media/globe.svg" class = "bigsvg">
-                    </a>
-                </div> 
 
+        </div>
+        <div class = "linkz">                
+            <p>Hépatites Info Service</p>
+            <div>
+                <a href = "https://www.hepatites-info-service.org">
+                    <img src = "media/globe.svg" class = "bigsvg">
+                </a>
             </div>
-            <div class = "linkz">
-                <p>Ligneazur</p>                
-                <div>
-                    <a href = "https://www.ligneazur.org">
-                        <img src = "media/globe.svg" class = "bigsvg">
-                    </a>
-                </div>
 
+        </div>
+        <div class = "linkz">
+            <p>VIH Info Soignants</p>
+            <div>
+                <a href = "https://www.vih-info-soignants.fr">
+                    <img src = "media/globe.svg" class = "bigsvg">
+                </a>
+            </div> 
+
+        </div>
+        <div class = "linkz">
+            <p>Ligneazur</p>                
+            <div>
+                <a href = "https://www.ligneazur.org">
+                    <img src = "media/globe.svg" class = "bigsvg">
+                </a>
             </div>
-        </article>
+
+        </div>
+    </article>
 
     <div class="footer">
         <p>
@@ -188,9 +175,9 @@
                     document.getElementById("score").style.display = "block"; //Modifie le display de l'élément ayant l'ID "score"
                     document.getElementById("countdown").innerHTML = "Time's up !";
                 } else {
-                    document.getElementById("countdown").innerHTML = timeleft + " seconds remaining"; // cherche l'endroit avec l'ID "countdown" et le modifie (.innerHTML) par les trucs après le égal
+                    document.getElementById("countdown").innerHTML = "- - - " + timeleft + " - - -"; // cherche l'endroit avec l'ID "countdown" et le modifie (.innerHTML) par les trucs après le égal
                 }
-                //timeleft--; //écriture de la décrémentation, en gros timeleft = timeleft - 1
+                timeleft--; //écriture de la décrémentation, en gros timeleft = timeleft - 1
             }, 1000); // On a un interval qui est en ms donc si on veut que ça actualise toutes les secs faut mettre 1000ms
         });
     </script>

@@ -265,7 +265,6 @@ article > h1
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
-    /*height: calc(30vw * 9/16);*/
     position: absolute;
     top: 0;
 }
@@ -300,9 +299,9 @@ article > h1
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    height: calc(90vmin - (60vmin * 9/16));
+    height: calc(90vmin - (60vmin * 9/16) - 10vmin);
     position: absolute;
-    bottom: 0;
+    bottom: 10vmin;
 
 }
 
@@ -338,6 +337,15 @@ article > h1
 .answer .btn:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+}
+
+#countdown {
+    height: 10vmin;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
 }
 
 /*
