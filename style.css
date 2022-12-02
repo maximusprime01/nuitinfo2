@@ -211,8 +211,8 @@ article > h1
 }
 
 .SwipeCard {
-    height: 80vh;
-    width: 30vw;
+    height: 90vmin;
+    width: 60vmin;
     background-color: var(--primary-color);
     box-shadow: 0 5px 10px 0 var(--secondary-color);
     border-radius: 20px;
@@ -220,7 +220,7 @@ article > h1
     overflow: hidden;
     flex-direction: column;
     position: relative;
-    transition: all 0.5s;
+    transition: height 0.5s, width 0.5s;
 }
 
 .SwipeCard:hover {
@@ -232,7 +232,7 @@ article > h1
 
 .SwipeCard .header {
     width: 100%;
-    height: 40%;
+    height: calc(30vw * 9/16);
     position: absolute;
     top: 0;
 }
@@ -241,11 +241,11 @@ article > h1
     max-width: 100%;
     height: auto;
     transition: ease-in-out 600ms;
-    z-index: -1;
+    /*z-index: -1;*/
 }
 
-.SwipeCard .header h1 {
-    color: var(--primary-color);
+.SwipeCard .header h2 
+{
     width: 60%;
     font-size: 30px;
     font-weight: bold;
@@ -255,16 +255,61 @@ article > h1
     right: 20%;
 }
 
-.SwipeCard .body {
+#title1
+{
+    color: #eee;
+    /*color: var(--primary-color);*/
+}
+
+.SwipeCard .card-body 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
     height: 55%;
     position: absolute;
     bottom: 0;
-    justify-content: center;
-    align-items: center;
+    
 }
 
-.SwipeCard .body .suggestions {
+.SwipeCard > .card-body > .answer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.SwipeCard > .card-body > .answer > p {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.answer > .btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: var(--secondary-color) 1px solid;
+    margin: 2px;
+    font-size: 24px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.answer .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/*
+.SwipeCard .card-body .suggestions {
     width: 80%;
     height: 80%;
     background: var(--primary-color);
@@ -272,15 +317,16 @@ article > h1
     padding-left: 5%;
 }
 
-.SwipeCard .body .suggestions h1 {
+.SwipeCard .card-body .suggestions h1 {
     font-size: 25px;
     font-weight: bold;
 }
 
-.SwipeCard .body .suggestions p {
+.SwipeCard .card-body .suggestions p {
     font-size: 20px;
     font-weight: normal;
 }
+
 
 .SwipeCard .reponses {
     width: 100%;
@@ -311,3 +357,5 @@ article > h1
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
+
+*/
