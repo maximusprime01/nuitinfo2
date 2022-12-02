@@ -37,14 +37,22 @@
         </nav>
 
         <div class="main" id="game">
+
             <div id="startButton">
                 <button class="start-button">
                     Start
                 </button>
-            </div>            
-            <div class="score" id="score">score = 0</div>
+            </div>    
+
+
+            <div class="main-centered score" id="score">
+                score = 0
+            </div>
+
+
             <div class="MainGame" id="mainGame">
                 <div class="SwipeCard">
+
                     <div class="header">
                         <h2 id="title1">Qu'est-ce donc que cette chose ?</h2>
                         <img src="media/gigachad.jpg">                        
@@ -64,23 +72,21 @@
                             <button class="btn c">C</button>                            
                         </div>
                     </div>
+
                     <div id="countdown">
                         - - - 10 - - -
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
     
-    <article>
+    <article id="learnmore">
         <h1>Learn more</h1>
         <div class = "linkz">
             <p>Sida Info Service</p>
-
-        <article id="learnmore">
-            <h1>Learn more</h1>
-            <div class = "linkz">
-                <p>Sida Info Service</p>
             <div>
                 <a href = "https://www.facebook.com/SidaInfoService">
                     <img src = "media/facebook.svg" class = "bigsvg">
@@ -93,10 +99,9 @@
                 <a href = "https://www.sida-info-service.org">
                     <img src = "media/globe.svg" class = "bigsvg">
                 </a>
-
             </div>
-
         </div>
+
         <div class = "linkz">
             <p>Sexualités Info Santé</p>
             <div> 
@@ -109,8 +114,8 @@
                 </a>
 
             </div>
-
         </div>
+
         <div class = "linkz">                
             <p>Hépatites Info Service</p>
             <div>
@@ -118,8 +123,8 @@
                     <img src = "media/globe.svg" class = "bigsvg">
                 </a>
             </div>
-
         </div>
+
         <div class = "linkz">
             <p>VIH Info Soignants</p>
             <div>
@@ -127,8 +132,8 @@
                     <img src = "media/globe.svg" class = "bigsvg">
                 </a>
             </div> 
-
         </div>
+
         <div class = "linkz">
             <p>Ligneazur</p>                
             <div>
@@ -136,8 +141,8 @@
                     <img src = "media/globe.svg" class = "bigsvg">
                 </a>
             </div>
-
         </div>
+
     </article>
 
     <div class="footer">
@@ -146,8 +151,6 @@
             <br/>
             <br/>AAAAAAAAAAAAAAAAAAAAA!
         </p>
-    </div>
-
     </div>
 
     <script>
@@ -172,7 +175,7 @@
                 if (timeleft <= 0) {
                     clearInterval(Timer); //ça stop le countdown pour pas que ça aille <0 
                     document.getElementById("mainGame").style.display = "none"; //Modifie le display de l'élément ayant l'ID "mainGame"
-                    document.getElementById("score").style.display = "block"; //Modifie le display de l'élément ayant l'ID "score"
+                    document.getElementById("score").style.display = "flex"; //Modifie le display de l'élément ayant l'ID "score"
                     document.getElementById("countdown").innerHTML = "Time's up !";
                 } else {
                     document.getElementById("countdown").innerHTML = "- - - " + timeleft + " - - -"; // cherche l'endroit avec l'ID "countdown" et le modifie (.innerHTML) par les trucs après le égal

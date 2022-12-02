@@ -7,9 +7,9 @@
 }
 
 .darkmode {
-    --primary-color: #000106;
-    --secondary-color: #fff;
-    --third-color: #2a3885;
+    --primary-color: #1f1f22;
+    --secondary-color: #c2c2c2;
+    --third-color: #303866;
 }
 
 * {
@@ -136,6 +136,7 @@ article
     background-color: var(--third-color); 
     display: flex;
     flex-direction: column;
+    padding: 5vmin 0;
 }
 
 article > h1
@@ -187,10 +188,12 @@ article > h1
     justify-content: center;
     color: var(--secondary-color);
     text-align: center;
+    padding: 5vmin;
 }
 
 
 /*Main Game Start Button and Score*/
+
 
 #startButton
 {
@@ -200,6 +203,18 @@ article > h1
     justify-content: center;
     align-items: center;
 }
+
+/*
+#score
+{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+*/
+
 
 .start-button {
     font-size: 3em;
@@ -221,11 +236,24 @@ article > h1
     background-color: var(--primary-color);
 }
 
+
+.main-centered
+{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .score {
     display: none;
-    font-size: 30px;
-    text-align: center;
+    font-size: 3em;
+    /*text-align: center;*/
 }
+
+
 
 .MainGame {
     display: none;
